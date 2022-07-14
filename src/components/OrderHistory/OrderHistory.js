@@ -22,7 +22,7 @@ const OrderHistory = () => {
             </div>
           </section>
 
-          <section className='my-10'>
+          <section className='my-10 mx-5'>
             <div className="flex justify-between max-w-[600px] md:mx-auto">
               <div className="flex flex-col items-center">
                 <Link to="/grab-history">Grab History</Link>
