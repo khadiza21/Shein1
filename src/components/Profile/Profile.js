@@ -4,8 +4,6 @@ import { MdEmail } from "react-icons/md";
 import { AiOutlineClear } from "react-icons/ai";
 import { AiOutlineSound } from "react-icons/ai";
 import { AiOutlineArrowRight } from "react-icons/ai";
-
-// images
 import info from "../../images/68d5e54.svg";
 import deposit from "../../images/fae87e4.svg";
 import withdraw from "../../images/a723444.svg";

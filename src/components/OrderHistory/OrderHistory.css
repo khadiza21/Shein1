@@ -5,33 +5,6 @@ header {
   left: 0;
   right: 0;
 }
-/* .content-area {
-  position: relative;
-  top: 10px;
-} */
-.text-small {
-  font-size: 10px;
-  font-weight: bold;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-.text-small li a {
-  padding-right: 2px;
-  padding-left: 2px;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-@media (min-width: 1024px) {
-  .text-small {
-    font-size: 14px;
-    padding-left: 35%;
-  }
-  .lg\:text-xl {
-    font-size: 1rem /* 20px */;
-    line-height: 1.75rem /* 28px */;
-  }
-}
-
 .OrderHistoryFooter {
   display: flex;
   position: fixed;

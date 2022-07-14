@@ -22,6 +22,8 @@ import DepositAndWithdrawal from "./components/TeamReport/DepositAndWithdrawal";
 import Transiction from "./components/Transiction/Transiction";
 import DepositeHistory from "./components/Transiction/DepositeHistory";
 import WithdrawalHistory from "./components/Transiction/WithdrawalHistory";
+import GrabHistory from "./components/OrderHistory/GrabHistory/GrabHistory";
+import EarnHistory from "./components/OrderHistory/EarnHistory/EarnHistory";
 
 function App() {
   return (
@@ -81,6 +83,14 @@ function App() {
         <Route
           path="/withdrawal-history"
           element={<WithdrawalHistory></WithdrawalHistory>}
+        ></Route>
+        <Route
+          path="/grab-history"
+          element={<GrabHistory></GrabHistory>}
+        ></Route>
+        <Route
+          path="/earn-history"
+          element={<EarnHistory></EarnHistory>}
         ></Route>
         <Route path="/*" element={<NotFound></NotFound>}></Route>
       </Routes>

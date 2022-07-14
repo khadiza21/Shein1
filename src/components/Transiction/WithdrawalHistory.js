@@ -32,17 +32,17 @@ const WithdrawalHistory = () => {
             });
     }, []);
 
-    let a1 = whitdrawHistory?.slice(0, 50);
-    let a2 = whitdrawHistory?.slice(0, 100);
-    let a3 = whitdrawHistory?.slice(0, 200);
-    let a4 = whitdrawHistory?.slice(0, 300);
-    let a5 = whitdrawHistory?.slice(0, 400);
-    let a6 = whitdrawHistory?.slice(0, 500);
+    let a1 = whitdrawHistory?.slice(0, 5);
+    let a2 = whitdrawHistory?.slice(0, 10);
+    let a3 = whitdrawHistory?.slice(0, 15);
+    let a4 = whitdrawHistory?.slice(0, 20);
+    let a5 = whitdrawHistory?.slice(0, 25);
+    let a6 = whitdrawHistory?.slice(0, 50);
 
     let d = a6;
 
     if (dataLimit == 1) {
-
+       
         d = a1;
     } else if (dataLimit == 2) {
 
@@ -61,10 +61,8 @@ const WithdrawalHistory = () => {
         d = a6;
     } else if (dataLimit == 7) {
         d = a6;
+      
     }
-
-    const info = document.getElementById("info");
-    // paid(success  ),pending(warning),process(primary ),Cancelled(danger);
 
     return (
         <div className="container max-w-[1080px] mx-auto p-5">
@@ -99,7 +97,6 @@ const WithdrawalHistory = () => {
                     <option value={5}>400</option>
                     <option value={6}>500</option>
                 </select>
-
             </div>
             <div>
                 <div class="overflow-x-auto">

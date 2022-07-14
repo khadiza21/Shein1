@@ -59,6 +59,7 @@ const DepositeHistory = () => {
         d = a6;
     } else if (dataLimit == 7) {
         d = a6;
+        console.log(dataLimit);
     }
 
 

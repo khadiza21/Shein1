@@ -11,6 +11,7 @@ const Transiction = () => {
         </Link>
         <h1 className="text-xl font-bold text-center">Team Report</h1>
       </div>
+
       <div className="flex justify-between max-w-[600px] md:mx-auto">
         <div className="flex flex-col items-center">
           <Link to="/withdrawal-history">Withdrawal History</Link>
@@ -20,7 +21,8 @@ const Transiction = () => {
           <Link to="/deposit-history">Deposit History</Link>
           <div className="h-[2px] w-6 bg-primary"></div>
         </div>
-      </div>  
+      </div>
+        
     </div>
   );
 };

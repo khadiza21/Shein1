@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Navber = () => {
   return (
     <div class="btm-nav max-w-[1080px] mx-auto grid grid-cols-5 mt-5">
+      
       <Link
         to="/"
         class="bg-neutral text-neutral-content hover:bg-pink-200 hover:text-pink-600 flex flex-col items-center p-5 justify-center"
