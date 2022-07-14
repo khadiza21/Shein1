@@ -103,7 +103,7 @@ const WithdrawalHistory = () => {
             </div>
             <div>
                 <div class="overflow-x-auto">
-                    <table class="table table-compact w-full">
+                    <table class="table table-compact w-full text-center font-bold">
                         <thead>
                             <tr>
                                 <th></th>
@@ -125,47 +125,47 @@ const WithdrawalHistory = () => {
                                     <td>
                                         <div className="text-center ">
                                             {p?.status == "paid"
-                                                ? <div className="flex font-bold ">
+                                                ?
                                                    
                                                     <span class="ml-2 rounded-lg badge badge-success gap-2">
                                                         Paid
                                                     </span>
-                                                </div>
+                                              
                                                 : <></>
 
                                             }
                                             {p?.status == "pending"
-                                                ? <div className="flex font-bold ">
+                                                ? 
                                                    
                                                     <span class="ml-2 rounded-lg badge badge-warning gap-2">
                                                         
                                                         Pending
 
                                                     </span>
-                                                </div>
+                                               
                                                 : <></>
 
                                             }
 
                                             {p?.status == "process"
-                                                ? <div className="flex font-bold ">
+                                                ? 
                                                     
                                                     <span class="ml-2 rounded-lg badge badge-primary gap-2">
                                                         Being Proceed
                                                     </span>
-                                                </div>
+                                               
                                                 : <></>
 
                                             }
                                             {p?.status == "cancelled"
-                                                ? <div className="flex font-bold ">
+                                                ? 
                                                    
                                                     <span class="ml-2 rounded-lg badge badge-danger gap-2">
                                                       
                                                         Cancelled
 
                                                     </span>
-                                                </div>
+                                                
                                                 : <></>
 
                                             }

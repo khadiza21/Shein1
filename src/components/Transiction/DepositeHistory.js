@@ -100,9 +100,9 @@ const DepositeHistory = () => {
 
             <div>
                 <div class="overflow-x-auto">
-                    <table class="table table-compact w-full">
+                    <table class="text-center table table-compact w-full">
                         <thead>
-                            <tr>
+                            <tr >
                                 <th></th>
                                 <th>Account</th>
                                 <th>Time</th>
@@ -113,7 +113,7 @@ const DepositeHistory = () => {
                         </thead>
                         {d?.map((p) => (
                             <tbody key={p?.id}>
-                                <tr>
+                                <tr className="text-center">
                                     <th>{count++}</th>
                                     <td>{p?.id}</td>
                                     <td>{p?.date}</td>
@@ -122,75 +122,75 @@ const DepositeHistory = () => {
                                     <td>
                                         <div className="text-center ">
                                             {p?.payment_status == "finished"
-                                                ? <div className="flex font-bold ">
-                                                  
-                                                    <span class="ml-2 rounded-lg badge badge-success gap-2">
-                                                        Proceed 
+                                                ? 
+
+                                                    <span class=" font-bold ml-2 rounded-lg badge badge-success gap-2">
+                                                        Proceed
                                                     </span>
-                                                </div>
+                                               
                                                 : <></>
                                             }
 
                                             {p?.payment_status == "waiting"
-                                                ? <div className="flex font-bold ">
-                                                 
-                                                    <span class="ml-2 rounded-lg badge badge-warning gap-2">
-                                                      
-                                                        Waiting Payment
-                                                    </span>
-                                                </div>
+                                                ?
+
+                                                <span class="font-bold  ml-2 rounded-lg badge badge-warning gap-2">
+
+                                                    Waiting Payment
+                                                </span>
+
                                                 : <></>
                                             }
                                             {p?.payment_status == "confirmed"
-                                                //  || "sending" || "confirming"
-                                                ? <div className="flex font-bold ">
-                                                  
-                                                    <span class="ml-2 rounded-lg badge badge-primary gap-2">                                                  
+
+                                                ?
+
+                                                    <span class=" font-bold ml-2 rounded-lg badge badge-primary gap-2">
                                                         Being Proceed
                                                     </span>
-                                                </div>
+                                               
                                                 : <></>
                                             }
                                             {p?.payment_status == "sending"
-                                                
-                                                ? <div className="flex font-bold ">
-                                                  
-                                                    <span class="ml-2 rounded-lg badge badge-primary gap-2">                                                  
+
+                                                ? 
+
+                                                    <span class=" font-bold ml-2 rounded-lg badge badge-primary gap-2">
                                                         Being Proceed
                                                     </span>
-                                                </div>
+                                              
                                                 : <></>
                                             }
                                             {p?.payment_status == "confirming"
-                                              
-                                                ? <div className="flex font-bold ">
-                                                  
-                                                    <span class="ml-2 rounded-lg badge badge-primary gap-2">                                                  
+
+                                                ?
+
+                                                    <span class=" font-bold  ml-2 rounded-lg badge badge-primary gap-2">
                                                         Being Proceed
                                                     </span>
-                                                </div>
+                                                
                                                 : <></>
                                             }
 
 
                                             {p?.payment_status == "failed"
-                                                ? <div className="flex font-bold ">
-                                               
-                                                    <span class="ml-2 rounded-lg badge badge-danger gap-2">
-                                                        
-                                                        Failed 
+                                                ? 
+
+                                                    <span class=" font-bold ml-2 rounded-lg badge badge-danger gap-2">
+
+                                                        Failed
                                                     </span>
-                                                </div>
+                                               
                                                 : <></>
                                             }
                                             {p?.payment_status == ""
-                                                ? <div className="flex font-bold ">
-                                               
-                                                    <span class="ml-2 rounded-lg badge badge-secondary gap-2">
-                                                        
-                                                        Status 
+                                                ? 
+
+                                                    <span class=" font-bold  ml-2 rounded-lg badge badge-secondary gap-2">
+
+                                                        Status
                                                     </span>
-                                                </div>
+                                                
                                                 : <></>
                                             }
                                         </div>
