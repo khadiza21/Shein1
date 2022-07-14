@@ -37,7 +37,7 @@ const DepositeHistory = () => {
     let a5 = dipoHistory?.slice(0, 400);
     let a6 = dipoHistory?.slice(0, 500);
 
-    let d = a2;
+    let d = a6;
 
     if (dataLimit == 1) {
 
@@ -57,7 +57,7 @@ const DepositeHistory = () => {
     }
     else if (dataLimit == 6) {
         d = a6;
-    } else if (dataLimit == 100) {
+    } else if (dataLimit == 7) {
         d = a6;
     }
 
@@ -85,7 +85,7 @@ const DepositeHistory = () => {
                     id="dataLimit" defaultValue="Select Limit"
                     onChange={(e) => setDataLimit(e.target.value)}
                     className="select select-secondary select-bordered w-[150px] max-w-xs">
-                    <option vlaue={100} selected>
+                    <option vlaue={7} >
                         All
                     </option>
                     <option value={1}>50</option>
@@ -122,12 +122,12 @@ const DepositeHistory = () => {
                                     <td>
                                         <div className="text-center ">
                                             {p?.payment_status == "finished"
-                                                ? 
+                                                ?
 
-                                                    <span class=" font-bold ml-2 rounded-lg badge badge-success gap-2">
-                                                        Proceed
-                                                    </span>
-                                               
+                                                <span class=" font-bold ml-2 rounded-lg badge badge-success gap-2">
+                                                    Proceed
+                                                </span>
+
                                                 : <></>
                                             }
 
@@ -145,52 +145,52 @@ const DepositeHistory = () => {
 
                                                 ?
 
-                                                    <span class=" font-bold ml-2 rounded-lg badge badge-primary gap-2">
-                                                        Being Proceed
-                                                    </span>
-                                               
+                                                <span class=" font-bold ml-2 rounded-lg badge badge-primary gap-2">
+                                                    Being Proceed
+                                                </span>
+
                                                 : <></>
                                             }
                                             {p?.payment_status == "sending"
 
-                                                ? 
+                                                ?
 
-                                                    <span class=" font-bold ml-2 rounded-lg badge badge-primary gap-2">
-                                                        Being Proceed
-                                                    </span>
-                                              
+                                                <span class=" font-bold ml-2 rounded-lg badge badge-primary gap-2">
+                                                    Being Proceed
+                                                </span>
+
                                                 : <></>
                                             }
                                             {p?.payment_status == "confirming"
 
                                                 ?
 
-                                                    <span class=" font-bold  ml-2 rounded-lg badge badge-primary gap-2">
-                                                        Being Proceed
-                                                    </span>
-                                                
+                                                <span class=" font-bold  ml-2 rounded-lg badge badge-primary gap-2">
+                                                    Being Proceed
+                                                </span>
+
                                                 : <></>
                                             }
 
 
                                             {p?.payment_status == "failed"
-                                                ? 
+                                                ?
 
-                                                    <span class=" font-bold ml-2 rounded-lg badge badge-danger gap-2">
+                                                <span class=" font-bold ml-2 rounded-lg badge badge-danger gap-2">
 
-                                                        Failed
-                                                    </span>
-                                               
+                                                    Failed
+                                                </span>
+
                                                 : <></>
                                             }
                                             {p?.payment_status == ""
-                                                ? 
+                                                ?
 
-                                                    <span class=" font-bold  ml-2 rounded-lg badge badge-secondary gap-2">
+                                                <span class=" font-bold  ml-2 rounded-lg badge badge-secondary gap-2">
 
-                                                        Status
-                                                    </span>
-                                                
+                                                    Status
+                                                </span>
+
                                                 : <></>
                                             }
                                         </div>

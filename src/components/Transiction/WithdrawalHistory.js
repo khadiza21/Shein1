@@ -39,7 +39,7 @@ const WithdrawalHistory = () => {
     let a5 = whitdrawHistory?.slice(0, 400);
     let a6 = whitdrawHistory?.slice(0, 500);
 
-    let d = a2;
+    let d = a6;
 
     if (dataLimit == 1) {
 
@@ -59,7 +59,7 @@ const WithdrawalHistory = () => {
     }
     else if (dataLimit == 6) {
         d = a6;
-    } else if (dataLimit == 100) {
+    } else if (dataLimit == 7) {
         d = a6;
     }
 
@@ -89,7 +89,7 @@ const WithdrawalHistory = () => {
                     id="dataLimit" defaultValue="Select Limit"
                     onChange={(e) => setDataLimit(e.target.value)}
                     className="select select-secondary select-bordered w-[150px] max-w-xs">
-                    <option vlaue={100} selected>
+                    <option vlaue={7} selected>
                         All
                     </option>
                     <option value={1}>50</option>
@@ -99,7 +99,7 @@ const WithdrawalHistory = () => {
                     <option value={5}>400</option>
                     <option value={6}>500</option>
                 </select>
-             
+
             </div>
             <div>
                 <div class="overflow-x-auto">
@@ -121,51 +121,51 @@ const WithdrawalHistory = () => {
                                     <td>{p?.id}</td>
                                     <td>{p?.date}</td>
                                     <td>{p?.amount}</td>
-                                  
+
                                     <td>
                                         <div className="text-center ">
                                             {p?.status == "paid"
                                                 ?
-                                                   
-                                                    <span class="ml-2 rounded-lg badge badge-success gap-2">
-                                                        Paid
-                                                    </span>
-                                              
+
+                                                <span class="ml-2 rounded-lg badge badge-success gap-2">
+                                                    Paid
+                                                </span>
+
                                                 : <></>
 
                                             }
                                             {p?.status == "pending"
-                                                ? 
-                                                   
-                                                    <span class="ml-2 rounded-lg badge badge-warning gap-2">
-                                                        
-                                                        Pending
+                                                ?
 
-                                                    </span>
-                                               
+                                                <span class="ml-2 rounded-lg badge badge-warning gap-2">
+
+                                                    Pending
+
+                                                </span>
+
                                                 : <></>
 
                                             }
 
                                             {p?.status == "process"
-                                                ? 
-                                                    
-                                                    <span class="ml-2 rounded-lg badge badge-primary gap-2">
-                                                        Being Proceed
-                                                    </span>
-                                               
+                                                ?
+
+                                                <span class="ml-2 rounded-lg badge badge-primary gap-2">
+                                                    Being Proceed
+                                                </span>
+
                                                 : <></>
 
                                             }
                                             {p?.status == "cancelled"
-                                                ? 
-                                                   
-                                                    <span class="ml-2 rounded-lg badge badge-danger gap-2">
-                                                      
-                                                        Cancelled
+                                                ?
 
-                                                    </span>
-                                                
+                                                <span class="ml-2 rounded-lg badge badge-danger gap-2">
+
+                                                    Cancelled
+
+                                                </span>
+
                                                 : <></>
 
                                             }
